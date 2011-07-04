@@ -1,0 +1,173 @@
+-----------------------------------------------------------------
+REFERENCES
+-----------------------------------------------------------------
+
+Generative Gestaltung
+---------------------
+- Author
+Hartmut Bohnacker, Benedikt Groß, Julia Laub, Claudius Lazzeroni
+
+- URL
+http://www.generative-gestaltung.de
+
+
+FORM+CODE
+---------
+- Author
+Casey Reas, Chandler McWilliams, and LUST
+
+- URL
+http://www.formandcode.com
+
+
+
+-----------------------------------------------------------------
+FRAMEWORKS
+-----------------------------------------------------------------
+
+Processing
+----------
+- Author
+Casey Reas, Ben Fry
+
+- Project
+http://processing.org
+
+
+Processing.js
+-------------
+- Author
+John Resig
+
+- Project
+http://processingjs.org
+
+
+
+-----------------------------------------------------------------
+COMPONENTS
+-----------------------------------------------------------------
+
+JSON Framework
+--------------
+- Author
+Stig Brautaset
+http://stig.brautaset.org
+
+- Project
+http://stig.github.com/json-framework
+
+
+AQGridView
+----------
+- Author
+Alan Quatermain 
+http://alanquatermain.net
+
+- Project
+https://github.com/AlanQuatermain/AQGridView
+
+
+
+Twitter+OAuth
+-------------
+- Author
+Ben Gottlieb
+
+- Project
+http://github.com/bengottlieb/Twitter-OAuth-iPhone
+
+
+MGTwitterEngine
+-------------
+- Author
+Matt Gemmell
+http://mattgemmell.com
+
+- Project
+https://github.com/mattgemmell/MGTwitterEngine
+
+
+OAuthConsumer Framework
+-----------------------
+- Author
+Jon Crosby
+
+- Project
+http://code.google.com/p/oauth/
+
+
+PlainOAuth
+---------------
+- Author
+Jaanus Kase
+http://www.jaanuskase.com
+
+- Project
+https://github.com/jaanus/PlainOAuth
+
+
+ASIHTTPRequest
+--------------
+- Author
+Ben Copsey
+http://allseeing-i.com
+
+- Project
+https://github.com/pokeb/asi-http-request
+
+
+SMPageControl
+-------------
+- Author
+Simon Maddox
+
+- Project
+https://github.com/simonmaddox/SMPageControl
+
+
+DoubleSlider
+------------
+- Author
+Doukas Dimitris
+http://doukasd.com
+
+- Project
+https://github.com/doukasd/DoubleSlider
+
+
+CMColorPicker
+-------------
+- Author
+Alex Restrepo
+
+- Project
+http://homepage.mac.com/alexrestrepo/indexmain.html
+
+
+
+
+
+-----------------------------------------------------------------
+ASSETS
+-----------------------------------------------------------------
+
+Glyphish Icons
+--------------
+- Author
+Joseph Wain
+http://penandthink.com
+
+- Project
+http://glyphish.com
+
+
+iPad GUI PSD
+------------
+- Author
+Geoff Teehan
+Jon Lax
+
+- Project
+http://www.teehanlax.com/blog/2010/12/10/ipad-gui-psd-version-2/
+

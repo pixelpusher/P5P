@@ -1,0 +1,345 @@
+/* --- P5P --------------------------------------------------------------------------- */
+/* --- general ----------------------------------------------------------------------- */
+/* --- author: CNPP  ----------------------------------------------------------------- */
+
+
+/*<![CDATA[*/
+@media all {
+
+
+/* -------------------------------------------------------------------------------------
+ LAYOUT
+ ===================================================================================== */
+
+/* html */
+html {
+	width:100%;
+}
+
+/* body */
+body {
+	width:100%;
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size:12px;
+	line-height:15px;
+	color:#000000;
+	background-color:#FFFFFF;
+	background-image:url('../../img/bg_paper.jpg');
+	background-position:left top;
+	background-repeat:repeat;
+	-webkit-text-size-adjust: none;
+} 
+
+/* page */
+#page {
+	margin:0 20px;
+	padding:0 0 20px 0;
+}
+
+/* header */
+header {
+	position:relative;
+	padding:18px 0 0 0;
+	margin:0 0 9px 0;
+}
+nav {
+	position:absolute;
+	left:200px;
+	top:25px;
+	height:25px;
+	-moz-transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+#badge {
+	position:absolute;
+	right:-20px;
+	top:0px;
+	-moz-transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+
+/* footer */
+footer {
+	max-width:960px;
+	padding:30px 0 36px;
+}
+ 
+
+
+/* -------------------------------------------------------------------------------------
+ STRUCTURE
+ ===================================================================================== */
+
+/* section */
+section {
+	max-width:960px;
+	padding:9px 0 0 0;
+	margin:0 0 24px 0;
+}
+
+
+/* fluid */
+article {
+    max-width:420px;
+}
+.fluid article, .fluid aside {
+	-moz-transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+.fluid article {
+	float:left;
+	width:45%;
+	margin:0 5% 0 0;
+}
+.fluid aside {
+	float:right;
+	width:50%;
+}
+
+
+
+/* -------------------------------------------------------------------------------------
+ GENERIC
+ ===================================================================================== */
+
+/* clear */
+.clear {
+	clear:both;
+	width:0;
+	height:0;
+	font-size:0;
+	line-height:0;
+	text-indent:-10000px;
+}
+
+/* invisible */
+.invisible {
+	position:absolute;
+	left:-10000px;
+	top:-10000px;
+	visibility:hidden;
+	width:0;
+	height:0;
+	line-height:0;
+}
+
+/* hidden */
+.hidden {
+	visibility:hidden;
+}
+
+
+/* hover */
+.hover {
+	cursor:pointer;
+}
+.hover a {
+	text-decoration:underline;
+}
+
+/* icons */
+.twitter, .facebook, .email {
+	display:inline-block;
+	padding:3px;
+}
+.twitter:hover, .facebook:hover, .email:hover {
+	text-decoration:underline;
+}
+.twitter:before {
+    content:"✌ ";
+}
+.facebook:before {
+    content:"❤ ";
+}
+.email:before {
+    content:"✉ ";
+}
+
+
+
+/* -------------------------------------------------------------------------------------
+ FONTS
+ ===================================================================================== */
+
+/* headings */
+h1, h2, h3, h4 {
+	text-rendering:optimizelegibility;
+}
+h1 {
+	font-size:18px;
+	line-height:15px;
+}
+h2 {
+	font-size:18px;
+	line-height:18px;
+	margin:0 0 9px 0;
+}
+h3 {
+	line-height:24px;
+    font-weight:bold;
+	text-transform:uppercase;
+}
+h4 {
+    line-height:24px;
+    font-weight:bold;
+}
+
+
+/* paragraphs */
+p {
+	margin:0 0 9px 0;
+}
+
+
+/* links */
+a, a:hover {
+	color:#000000;
+	text-decoration:none;
+}
+.content a {
+	text-decoration:underline;
+}
+.content a:hover {
+	text-decoration:none;
+}
+    
+/* quote */
+blockquote { 
+    font-style:italic; 
+}
+blockquote p {
+    margin-bottom:3px;
+}
+blockquote p:before { 
+    content: "“"; 
+}
+blockquote p:after { 
+    content: "”";
+}
+
+
+
+    
+/* linked */
+ul.linked {
+    margin:0 0 15px 0;
+}
+ul.linked li {
+    margin:0 0 5px 0;
+}
+ul.linked li a:before {
+    content:"➝  ";
+}
+ul.linked li a {
+    text-decoration:none;
+}
+ul.linked li a:hover {
+    text-decoration:underline;
+}
+ul.linked li a em {
+    display:block;
+}
+ul.linked li a:hover em {
+    text-decoration:none;
+}
+
+/* cited */
+ul.cited {
+    padding:0;
+    margin:0;
+}
+ul.cited li {
+    margin:0 0 18px 0;
+}
+ul.cited li a:before {
+    content:"➝  ";
+}
+ul.cited li a {
+    text-decoration:none;
+}
+ul.cited li a:hover {
+    text-decoration:underline;
+}
+ul.cited li a em {
+    display:block;
+}
+ul.cited li a:hover em {
+    text-decoration:none;
+}
+
+
+/* social */
+ul.social {
+    margin:-3px 0 0 -3px;
+}
+ul.social li {
+    margin:0 10px 0 0;
+}
+ul.social li:after {
+    content:"";
+}
+
+
+/* listed */
+ul.listed {
+	
+}
+ul.listed li {
+	float:left;
+	margin:0 5px 0 0;
+}
+ul.listed li:after {
+	content:" / ";
+}
+ul.listed li:last-child:after {
+	content:"";
+}
+
+/* social */
+ul.social {
+	margin:-3px 0 0 -3px;
+}
+ul.social li {
+	margin:0 10px 0 0;
+}
+ul.social li:after {
+	content:"";
+}
+
+
+/* listing */
+ul.listing {
+	border-top:1px solid rgba(0,0,0,0.20);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	margin:0 0 18px 0;
+}
+ul.listing li {
+	line-height:18px;
+	border-bottom:1px solid rgba(0,0,0,0.20);
+	border-top: 1px solid rgba(255,255,255,0.1);
+}
+ul.listing li a,
+ul.listing li span {
+	display: block;
+	padding: 8px 10px;
+	text-decoration: none;
+	background: rgba(0,0,0,0.03);
+}
+ul.listing li a:before {
+}
+ul.listing li em {
+	font-size:9px;
+}
+
+
+
+
+
+}
+/*]]>*/

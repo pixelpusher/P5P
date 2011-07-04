@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<P5P>
+	<Collection cid="test" name="Test" meta="Test Cases." thumb="collection.png" lib="_test/_plib/test.pde" sort="0">
+		<!-- sketch -->
+		<Sketch sid="defaults" name="Test Defaults" meta="Test." thumb="sketch.png" sketch="_test/defaults/defaults.pde" sort="1">
+			<Default key="test_value" value="test_value (device)" />
+			<Default key="test_device" value="test_device value" />
+		</Sketch>
+		<!-- sketch -->
+		<Sketch sid="settings" name="Test Settings" meta="Test." thumb="sketch.png" sketch="_test/settings/settings.pde" sort="2">
+			<SettingGroup gid="test_live" name="Test Live" sort="1">
+				<Setting key="test_live_x" label="Test Live x" value="{'value':0.5,'min':0.0,'max':1.0}" type="slider" options="" live="YES" sort="1"/>
+				<Setting key="test_live_y" label="Test Live y" value="{'value':0.5,'min':0.0,'max':1.0}" type="slider" options="" live="YES" sort="2"/>
+                <Setting key="test_color" label="Test Color" value="{}" type="color" options="{}" live="YES" sort="3"/>
+			</SettingGroup>
+			<SettingGroup gid="test_inputs" name="Test Inputs" sort="2">
+				<Setting key="test_switch" label="Test Switch" value="NO" type="switch" options="" live="NO" sort="1"/>
+				<Setting key="test_slider" label="Test Slider" value="{'value':10.0,'min':5.0,'max':15.0}" type="slider" options="" live="NO" sort="2"/>
+				<Setting key="test_range" label="Test Range" value="{'rmin':4,'rmax':6,'min':2,'max':8}" type="range" options="" live="NO" sort="3"/>
+				<Setting key="test_picker" label="Test Picker" value="picker_a" type="picker" options="{'picker':[{'label':'picker a','value':'picker_a'},{'label':'picker b','value':'picker_b'},{'label':'picker c','value':'picker_c'}]}" live="NO" sort="4"/>
+                <Setting key="test_color_swatches" label="Test Swatches" value="{}" type="color" options="{'swatches':[{'label':'red','r':'1','g':'0','b':'0'},{'label':'green','r':'0','g':'1','b':'0'},{'label':'blue','r':'0','g':'0','b':'1'}]}" live="NO" sort="5"/>
+			</SettingGroup>
+		</Sketch>
+		<!-- sketch -->
+		<Sketch sid="motion" name="Test Motion" meta="Test." thumb="sketch.png" sketch="_test/motion/motion.pde" sort="3"/>
+	</Collection>
+</P5P>

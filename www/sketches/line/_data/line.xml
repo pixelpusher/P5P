@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<P5P>
+	<Collection cid="line" name="Vol. 1 Line" meta="Vol. 1 Line." thumb="collection_line.png" lib="line/_plib/line.pde" sort="1">
+		<!-- sketch -->
+		<Sketch sid="cubism" name="Cubism" meta="Vol. 1 Line" thumb="sketch_line_qubism.jpg" sketch="line/cubism/cubism.pde" sort="1">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="NO" sort="1"/>
+				<Setting key="partitions" label="Partitions" value="{'rmin':4,'rmax':12,'min':3,'max':18}" type="range" options="" live="NO" sort="2"/>
+				<Setting key="randomness" label="Randomness" value="{'value':0.3,'min':0,'max':1}" type="slider" options="" live="NO" sort="3"/>
+			</SettingGroup>
+		</Sketch>
+        <!-- sketch -->
+		<Sketch sid="lineforline" name="Line for Line" meta="Vol. 1 Line" thumb="sketch_line_lineforline.jpg" sketch="line/lineforline/lineforline.pde" sort="2">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="NO" sort="1"/>
+				<Setting key="randomness" label="Randomness" value="{'value':0.3,'min':0,'max':1}" type="slider" options="" live="NO" sort="2"/>
+			</SettingGroup>
+			<SettingGroup gid="lines" name="Lines" sort="2">
+				<Setting key="lines_segments" label="Segments" value="{'rmin':5,'rmax':20,'min':2,'max':30}" type="range" options="" live="NO" sort="1"/>
+				<Setting key="lines_nb" label="Number" value="{'rmin':100,'rmax':450,'min':60,'max':900}" type="range" options="" live="NO" sort="2"/>
+			</SettingGroup>
+		</Sketch>
+		<!-- sketch -->
+		<Sketch sid="bitbybit" name="Bit by Bit" meta="Vol. 1 Line" thumb="sketch_line_bitbybit.jpg" sketch="line/bitbybit/bitbybit.pde" sort="3">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+				<Setting key="interaction" label="Interaction" value="auto" type="picker" options="{'picker':[{'label':'Auto','value':'auto'},{'label':'Touch','value':'touch'}]}" live="NO" sort="1"/>
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="NO" sort="2"/>
+				<Setting key="randomdeath" label="Random Death" value="{'value':0.3,'min':0,'max':1}" type="slider" options="" live="NO" sort="3"/>
+			</SettingGroup>
+			<SettingGroup gid="lines" name="Lines" sort="2">
+				<Setting key="lines_nb" label="Number" value="{'rmin':300,'rmax':600,'min':1,'max':900}" type="range" options="" live="NO" sort="1"/>
+				<Setting key="lines_length" label="Length" value="{'rmin':0.1,'rmax':0.5,'min':0,'max':1}" type="range" options="" live="NO" sort="2"/>
+			</SettingGroup>
+			<SettingGroup gid="direction" name="Directions" sort="3">
+				<Setting key="direction_up" label="Up" value="NO" type="switch" options="" live="NO" sort="1"/>
+				<Setting key="direction_upright" label="Up Right" value="YES" type="switch" options="" live="NO" sort="2"/>
+				<Setting key="direction_right" label="Rigth" value="NO" type="switch" options="" live="NO" sort="3"/>
+				<Setting key="direction_downright" label="Down Right" value="YES" type="switch" options="" live="NO" sort="4"/>
+				<Setting key="direction_down" label="Down" value="NO" type="switch" options="" live="NO" sort="5"/>
+				<Setting key="direction_downleft" label="Down Left" value="YES" type="switch" options="" live="NO" sort="6"/>
+				<Setting key="direction_left" label="Left" value="NO" type="switch" options="" live="NO" sort="7"/>
+				<Setting key="direction_upleft" label="Up Left" value="YES" type="switch" options="" live="NO" sort="8"/>
+			</SettingGroup>
+		</Sketch>
+		<!-- === sketch === -->
+		<Sketch sid="laspirale" name="La Spirale" meta="Vol. 1 Line" thumb="sketch_line_laspirale.jpg" sketch="line/laspirale/laspirale.pde" sort="4">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+				<Setting key="touch" label="Touch" value="frequency" type="picker" options="{'picker':[{'label':'Frequency','value':'frequency'},{'label':'Phase','value':'phase'},{'label':'Modulation','value':'modulation'}]}" live="YES" sort="1"/>
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="YES" sort="2"/>
+				<Setting key="mode" label="Mode" value="mode_1" type="picker" options="{'picker':[{'label':'Mode 1','value':'mode_1'},{'label':'Mode 2','value':'mode_2'}]}" live="NO" sort="3"/>
+			</SettingGroup>
+			<SettingGroup gid="frequency" name="Frequency" sort="2">
+				<Setting key="frequency_random" label="Random" value="YES" type="switch" options="" live="NO" sort="1"/>
+				<Setting key="frequency_x" label="Freq X" value="{'value':1,'min':1,'max':20}" type="slider" options="" live="NO" sort="2"/>
+				<Setting key="frequency_y" label="Freq Y" value="{'value':2,'min':1,'max':10}" type="slider" options="" live="NO" sort="3"/>
+				<Setting key="frequency_phase_x" label="Phase X" value="{'value':0,'min':0,'max':90}" type="slider" options="" live="NO" sort="4"/>
+				<Setting key="frequency_phase_y" label="Phase Y" value="{'value':0,'min':0,'max':90}" type="slider" options="" live="NO" sort="5"/>
+			</SettingGroup>
+			<SettingGroup gid="modulation" name="Modulation" sort="3">
+				<Setting key="modulation_random" label="Random" value="NO" type="switch" options="" live="NO" sort="1"/>
+				<Setting key="modulation_x" label="Mod X" value="{'value':0,'min':0,'max':20}" type="slider" options="" live="NO" sort="2"/>
+				<Setting key="modulation_y" label="Mod Y" value="{'value':0,'min':0,'max':20}" type="slider" options="" live="NO" sort="3"/>
+			</SettingGroup>
+		</Sketch>
+		<!-- sketch -->
+		<Sketch sid="agentc" name="Agent C" meta="Vol. 1 Line" thumb="sketch_line_agentc.jpg" sketch="line/agentc/agentc.pde" sort="5">
+		<SettingGroup gid="sketch" name="Sketch" sort="1">
+				<Setting key="interaction" label="Interaction" value="motion" type="picker" options="{'picker':[{'label':'Auto','value':'auto'},{'label':'Touch','value':'touch'},{'label':'Motion','value':'motion'}]}" live="YES" sort="1"/>
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="YES" sort="2"/>
+				<Setting key="movement_speed" label="Speed" value="{'value':0.5,'min':0.1,'max':1.0}" type="slider" options="" live="YES" sort="3"/>
+				<Setting key="movement_randomness" label="Randomness" value="{'value':0.5,'min':0,'max':3}" type="slider" options="" live="YES" sort="4"/>
+		</SettingGroup>
+		<SettingGroup gid="shape" name="Shape" sort="2">
+				<Setting key="shape_points" label="Points" value="{'rmin':4,'rmax':128,'min':4,'max':128}" type="range" options="" live="NO" sort="1"/>
+				<Setting key="shape_radius" label="Radius" value="{'rmin':0.1,'rmax':0.6,'min':0.1,'max':1.0}" type="range" options="" live="NO" sort="2"/>
+				<Setting key="shape_distort_x_probability" label="Distortion X" value="{'value':0.3,'min':0,'max':1}" type="slider" options="" live="NO" sort="3"/>
+				<Setting key="shape_distort_y_probability" label="Distortion Y" value="{'value':0.3,'min':0,'max':1}" type="slider" options="" live="NO" sort="4"/>
+		</SettingGroup>
+		</Sketch>
+		<!-- sketch -->
+		<Sketch sid="quellebruit" name="Quelle Bruit!" meta="Vol. 1 Line" thumb="sketch_line_quellebruit.jpg" sketch="line/quellebruit/quellebruit.pde" sort="6">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+				<Setting key="interaction" label="Interaction" value="auto" type="picker" options="{'picker':[{'label':'Auto','value':'auto'},{'label':'Touch','value':'touch'}]}" live="NO" sort="1"/>
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="YES" sort="2"/>
+				<Setting key="mode" label="Mode" value="mode_1" type="picker" options="{'picker':[{'label':'Mode 1','value':'mode_1'},{'label':'Mode 2','value':'mode_2'}]}" live="YES" sort="3"/>
+			</SettingGroup>
+			<SettingGroup gid="agents" name="Agents" sort="2">
+				<Setting key="agents" label="Agents" value="{'rmin':300,'rmax':600,'min':100,'max':1200}" type="range" options="" live="NO" sort="1"/>
+				<Setting key="collisions" label="Collisions" value="{'rmin':3,'rmax':9,'min':0,'max':18}" type="range" options="" live="NO" sort="2"/>
+			</SettingGroup>
+			<SettingGroup gid="noise" name="Noise" sort="3">           
+                <Setting key="noise_scale" label="Scale" value="{'value':150,'min':50,'max':300}" type="slider" options="" live="YES" sort="1"/>
+                <Setting key="noise_factor" label="Factor" value="{'value':50,'min':1,'max':100}" type="slider" options="" live="YES" sort="2"/>
+                <Setting key="noise_octaves" label="Octaves" value="{'value':6,'min':2,'max':32}" type="slider" options="" live="YES" sort="3"/>
+                <Setting key="noise_falloff" label="Falloff" value="{'value':0.4,'min':0.1,'max':0.8}" type="slider" options="" live="YES" sort="4"/>
+                <Setting key="noise_zinc" label="Z Increment" value="{'value':0.2,'min':0,'max':3}" type="slider" options="" live="YES" sort="5"/>
+			</SettingGroup>
+		</Sketch>
+		<!-- === sketch === -->
+		<Sketch sid="shapeon" name="Shapeon" meta="Vol. 1 Line" thumb="sketch_line_shapeon.jpg" sketch="line/shapeon/shapeon.pde" sort="7">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="NO" sort="1"/>
+				<Setting key="partitions" label="Partitions" value="{'rmin':2,'rmax':4,'min':2,'max':6}" type="range" options="" live="NO" sort="2"/>
+			</SettingGroup>
+			<SettingGroup gid="shape" name="Shape" sort="2">
+				<Setting key="shape_points" label="Points" value="{'rmin':4,'rmax':12,'min':3,'max':18}" type="range" options="" live="NO" sort="1"/>
+				<Setting key="shape_radius" label="Radius" value="{'rmin':0.5,'rmax':1.5,'min':0.1,'max':2}" type="range" options="" live="NO" sort="2"/>
+				<Setting key="shape_randomdeath" label="Random Death" value="{'rmin':0,'rmax':0.3,'min':0,'max':0.75}" type="range" options="" live="NO" sort="3"/>
+			</SettingGroup>
+		</Sketch>
+		<!-- sketch -->
+		<Sketch sid="inrecursion" name="In Recursion" meta="Vol. 1 Line" thumb="sketch_line_inrecursion.jpg" sketch="line/inrecursion/inrecursion.pde" sort="8">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="NO" sort="1"/>
+				<Setting key="live" label="Live" value="YES" type="switch" options="" live="NO" sort="2"/>
+				<Setting key="partitions" label="Partitions" value="{'rmin':2,'rmax':4,'min':2,'max':6}" type="range" options="" live="NO" sort="3"/>
+				<Setting key="flip" label="Flip" value="NO" type="switch" options="" live="NO" sort="4"/>
+			</SettingGroup>
+			<SettingGroup gid="lines" name="Lines" sort="2">
+				<Setting key="lines_minlength" label="Length" value="{'value':0.1,'min':0,'max':1}" type="slider" options="" live="NO" sort="1"/>
+				<Setting key="lines_randomdeath" label="Random Death" value="{'value':0.5,'min':0,'max':1}" type="slider" options="" live="NO" sort="2"/>
+			</SettingGroup>
+		</Sketch>
+		<!-- sketch -->
+		<Sketch sid="circled" name="Circled" meta="Vol. 1 Line" thumb="sketch_line_circled.jpg" sketch="line/circled/circled.pde" sort="9">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="NO" sort="1"/>
+				<Setting key="live" label="Live" value="YES" type="switch" options="" live="NO" sort="2"/>
+				<Setting key="partitions" label="Partitions" value="{'rmin':1,'rmax':6,'min':1,'max':8}" type="range" options="" live="NO" sort="3"/>
+			</SettingGroup>
+			<SettingGroup gid="circles" name="Circles" sort="2">
+				<Setting key="circles_nb" label="Number" value="{'rmin':1,'rmax':12,'min':1,'max':18}" type="range" options="" live="NO" sort="1"/>
+				<Setting key="circles_lag" label="Lag" value="{'rmin':0,'rmax':8,'min':0,'max':8}" type="range" options="" live="NO" sort="2"/>
+				<Setting key="circles_randomness" label="Randomness" value="{'rmin':0,'rmax':1,'min':0,'max':1}" type="range" options="" live="NO" sort="3"/>
+			</SettingGroup>
+		</Sketch>		
+		<!-- === sketch === -->
+		<Sketch sid="stuckonrepeat" name="Stuck on Repeat" meta="Vol. 1 Line" thumb="sketch_line_stuckonrepeat.jpg" sketch="line/stuckonrepeat/stuckonrepeat.pde" sort="10">
+			<SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="NO" sort="1"/>
+				<Setting key="partitions" label="Partitions" value="{'rmin':6,'rmax':12,'min':1,'max':24}" type="range" options="" live="NO" sort="2"/>
+			</SettingGroup>
+			<SettingGroup gid="lines" name="Lines" sort="2">
+				<Setting key="lines_nb" label="Number" value="{'rmin':3,'rmax':12,'min':1,'max':24}" type="range" options="" live="NO" sort="1"/>
+				<Setting key="lines_length" label="Length" value="{'rmin':0.25,'rmax':0.5,'min':0,'max':1}" type="range" options="" live="NO" sort="2"/>
+			</SettingGroup>
+			<SettingGroup gid="direction" name="Directions" sort="3">
+				<Setting key="direction_up" label="Up" value="YES" type="switch" options="" live="NO" sort="1"/>
+				<Setting key="direction_upright" label="Up Right" value="NO" type="switch" options="" live="NO" sort="2"/>
+				<Setting key="direction_right" label="Rigth" value="YES" type="switch" options="" live="NO" sort="3"/>
+				<Setting key="direction_downright" label="Down Right" value="NO" type="switch" options="" live="NO" sort="4"/>
+				<Setting key="direction_down" label="Down" value="YES" type="switch" options="" live="NO" sort="5"/>
+				<Setting key="direction_downleft" label="Down Left" value="NO" type="switch" options="" live="NO" sort="6"/>
+				<Setting key="direction_left" label="Left" value="YES" type="switch" options="" live="NO" sort="7"/>
+				<Setting key="direction_upleft" label="Up Left" value="NO" type="switch" options="" live="NO" sort="8"/>
+			</SettingGroup>
+		</Sketch>
+        <!-- sketch -->
+		<Sketch sid="strangeattractor" name="A Strange Attractor" meta="Vol. 1 Line" thumb="sketch_line_strangeattractor.jpg" sketch="line/strangeattractor/strangeattractor.pde" sort="11">
+            <SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="YES" sort="1"/>
+                <Setting key="layer" label="Layer" value="YES" type="switch" options="" live="YES" sort="2"/>
+			</SettingGroup>
+            <SettingGroup gid="nodes" name="Nodes" sort="2">
+				<Setting key="nodes_layout" label="Layout" value="layout_grid" type="picker" options="{'picker':[{'label':'Grid','value':'layout_grid'},{'label':'Circular','value':'layout_circular'}]}" live="NO" sort="1"/>
+				<Setting key="nodes_nbx" label="Number X" value="{'rmin':5,'rmax':15,'min':2,'max':40}" type="range" options="" live="NO" sort="2"/>
+                <Setting key="nodes_nby" label="Number Y" value="{'rmin':5,'rmax':15,'min':2,'max':40}" type="range" options="" live="NO" sort="3"/>
+			</SettingGroup>
+            <SettingGroup gid="attractor" name="Attractor" sort="3">
+                <Setting key="attractor_radius" label="Radius" value="{'value':150,'min':50,'max':300}" type="slider" options="" live="YES" sort="1"/>
+                <Setting key="attractor_strength" label="Strength" value="{'value':6,'min':-12,'max':12}" type="slider" options="" live="YES" sort="2"/>
+				<Setting key="attractor_lock_x" label="Lock X" value="NO" type="switch" options="" live="YES" sort="3"/>
+				<Setting key="attractor_lock_y" label="Lock Y" value="NO" type="switch" options="" live="YES" sort="4"/>
+			</SettingGroup>
+        </Sketch>
+        <!-- sketch -->
+		<Sketch sid="bodegabay" name="Bodega Bay" meta="Vol. 1 Line" thumb="sketch_line_bodegabay.jpg" sketch="line/bodegabay/bodegabay.pde" sort="12">
+            <SettingGroup gid="sketch" name="Sketch" sort="1">
+                <Setting key="interaction" label="Interaction" value="auto" type="picker" options="{'picker':[{'label':'Auto','value':'auto'},{'label':'Touch','value':'touch'}]}" live="YES" sort="1"/>
+                <Setting key="color" label="Color" value="{}" type="color" options="{}" live="YES" sort="2"/>
+				<Setting key="module" label="Module" value="module_vertex" type="picker" options="{'picker':[{'label':'Vertex','value':'module_vertex'},{'label':'Bezier','value':'module_bezier'},{'label':'Draw','value':'module_draw'}]}" live="NO" sort="3"/>
+			</SettingGroup>
+            <SettingGroup gid="boids" name="Boids" sort="2">
+                <Setting key="boids_nb" label="Number" value="{'rmin':4,'rmax':8,'min':4,'max':24}" type="range" options="" live="NO" sort="1"/>
+			</SettingGroup>
+        </Sketch>
+	</Collection>
+</P5P>

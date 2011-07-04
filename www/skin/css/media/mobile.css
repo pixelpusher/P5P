@@ -1,0 +1,107 @@
+/* --- P5P --------------------------------------------------------------------------- */
+/* --- mobile ------------------------------------------------------------------------ */
+/* --- author: CNPP  ----------------------------------------------------------------- */
+
+
+/*<![CDATA[*/
+@media screen and (max-width: 600px) {
+
+
+/* -------------------------------------------------------------------------------------
+ LAYOUT
+ ===================================================================================== */
+
+/* page */
+#page {
+	margin:0 10px;
+}
+
+/* navigation */
+nav {
+    left:140px;
+	-moz-transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+
+    
+/* -------------------------------------------------------------------------------------
+ STRUCTURE
+ ===================================================================================== */
+
+
+/* article / aside */
+.fluid article, .fluid aside {
+    float:none;
+    width:100%;
+	-moz-transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+    
+    
+/* -------------------------------------------------------------------------------------
+BRANDING
+===================================================================================== */
+
+/* logo */
+#header h1 a {
+    width:120px;
+    height:60px;
+	-moz-transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+    
+    
+/* -------------------------------------------------------------------------------------
+ BADGE
+ ===================================================================================== */
+
+/* badge */
+#badge {
+    right:0;
+    top:58px;
+	-moz-transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+
+#badge img {
+    display:none;
+}
+#badge img#badge_mobile {
+    display:block;
+    border-radius:6px;
+}
+
+    
+/* -------------------------------------------------------------------------------------
+ NAVIGATION
+ ===================================================================================== */
+
+
+/* items */
+#nav_sketches {
+    display:none;
+}
+
+
+
+/* -------------------------------------------------------------------------------------
+ PROCESSING
+ ===================================================================================== */
+
+/* canvas */
+.processing {
+	width:auto;
+	height:auto;
+}
+
+
+}
+/*]]>*/
