@@ -1,8 +1,8 @@
 //
-//  CellSlider.h
+//  APIKeys.m
 //  P5P
 //
-//  Created by CNPP on 11.2.2011.
+//  Created by CNPP on 27.1.2011.
 //  Copyright Beat Raess 2011. All rights reserved.
 //
 //  This file is part of P5P.
@@ -20,34 +20,15 @@
 //  You should have received a copy of the GNU General Public License
 //  along with P5P.  If not, see www.gnu.org/licenses/.
 
-#import "CellInput.h"
 
+// Google Analytics
+#define kGoogleAnalytics				@"GOOGLE-ANALYTICS-KEY"	
 
-/**
- * CellSliderDelegate Protocol.
- */
-@class CellSlider;
-@protocol CellSliderDelegate <NSObject>
-	- (void)cellSliderChanged:(CellSlider*)c;
-@end
+// Twitter 
+#define kTwitterAPI						@"TWITTER-API-KEY-GOES-HERE"
+#define kTwitterOAuthConsumerKey		@"TWITTER-CONSUMER-KEY"		
+#define kTwitterOAuthConsumerSecret		@"TWITTER-CONSUMER-SECRET"
 
+// TwitPic
+#define kTwitPicAPI						@"AND-THE-TWITPIC-API-KEY"
 
-/**
- * CellSlider.
- */
-@interface CellSlider : CellInput {
-
-	// delegate
-	id<CellSliderDelegate>delegate;
-	
-	// ui
-	UISlider *sliderAccessory;
-
-}
-
-// Properties
-@property (assign) id<CellSliderDelegate> delegate;
-@property (nonatomic, retain) UISlider *sliderAccessory;
-
-
-@end

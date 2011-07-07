@@ -28,7 +28,6 @@
 		1818B8E91323C02A00E30279 /* CellText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818B8E81323C02A00E30279 /* CellText.m */; };
 		1818B8FA1323C49700E30279 /* CellTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818B8F91323C49700E30279 /* CellTextViewController.m */; };
 		1819402912F31C6700BBB0C6 /* HTMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819402812F31C6700BBB0C6 /* HTMLView.m */; };
-		1819409C12F3214A00BBB0C6 /* credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1819409B12F3214A00BBB0C6 /* credits.txt */; };
 		181940D012F322A900BBB0C6 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 181940C712F322A900BBB0C6 /* NSObject+SBJSON.m */; };
 		181940D112F322A900BBB0C6 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 181940C912F322A900BBB0C6 /* NSString+SBJSON.m */; };
 		181940D212F322A900BBB0C6 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 181940CB12F322A900BBB0C6 /* SBJsonBase.m */; };
@@ -191,6 +190,8 @@
 		18EE3D9D13C09B1500775E7D /* P5P_default.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 18EE3D9C13C09B1500775E7D /* P5P_default.sqlite */; };
 		18F10C18133282AF00A3D84E /* SamplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F10C17133282AF00A3D84E /* SamplePlayer.m */; };
 		18F10C6F13328AE700A3D84E /* sample_selected.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18F10C6D13328AE700A3D84E /* sample_selected.wav */; };
+		18F22BE613C5A87F005BC007 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 18F22BE513C5A87F005BC007 /* COPYING */; };
+		18F22BE813C5A89F005BC007 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 18F22BE713C5A89F005BC007 /* README */; };
 		18F94DDE131FCFFB00BB1A83 /* CellPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F94DDD131FCFFB00BB1A83 /* CellPicker.m */; };
 		18F94E5E131FD8CA00BB1A83 /* CellPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F94E5D131FD8CA00BB1A83 /* CellPickerViewController.m */; };
 		18F9518D13201A8900BB1A83 /* slider_handle.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9518B13201A8900BB1A83 /* slider_handle.png */; };
@@ -258,7 +259,6 @@
 		1818B8F91323C49700E30279 /* CellTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTextViewController.m; sourceTree = "<group>"; };
 		1819402712F31C6700BBB0C6 /* HTMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLView.h; sourceTree = "<group>"; };
 		1819402812F31C6700BBB0C6 /* HTMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLView.m; sourceTree = "<group>"; };
-		1819409B12F3214A00BBB0C6 /* credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.txt; sourceTree = "<group>"; };
 		181940C512F322A900BBB0C6 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		181940C612F322A900BBB0C6 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		181940C712F322A900BBB0C6 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -529,6 +529,9 @@
 		18F10C16133282AF00A3D84E /* SamplePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePlayer.h; sourceTree = "<group>"; };
 		18F10C17133282AF00A3D84E /* SamplePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePlayer.m; sourceTree = "<group>"; };
 		18F10C6D13328AE700A3D84E /* sample_selected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sample_selected.wav; path = Assets/sample_selected.wav; sourceTree = "<group>"; };
+		18F22BE513C5A87F005BC007 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		18F22BE713C5A89F005BC007 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		18F22BE913C5AD9B005BC007 /* APIKeys_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKeys_template.h; sourceTree = "<group>"; };
 		18F94DDC131FCFFB00BB1A83 /* CellPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellPicker.h; sourceTree = "<group>"; };
 		18F94DDD131FCFFB00BB1A83 /* CellPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellPicker.m; sourceTree = "<group>"; };
 		18F94E5C131FD8CA00BB1A83 /* CellPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellPickerViewController.h; sourceTree = "<group>"; };
@@ -829,6 +832,7 @@
 			children = (
 				1817D3A11317D9A80046E501 /* P5PConstants.h */,
 				181343401332092D00986763 /* APIKeys.h */,
+				18F22BE913C5AD9B005BC007 /* APIKeys_template.h */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -1277,12 +1281,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18F22BE713C5A89F005BC007 /* README */,
 				1831BC7112FC2A5800A86AD4 /* artwork */,
 				1826092A12F30414003525E8 /* default */,
 				1826092912F30403003525E8 /* icon */,
-				1819409B12F3214A00BBB0C6 /* credits.txt */,
 				8D1107310486CEB800E47090 /* P5P-Info.plist */,
 				18049A1512F2C3C000B14E23 /* P5P.xcdatamodel */,
+				18F22BE513C5A87F005BC007 /* COPYING */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1371,7 +1376,6 @@
 				1826092612F303FE003525E8 /* Default@2x.png in Resources */,
 				1826092712F303FE003525E8 /* icon-72.png in Resources */,
 				1826092812F303FE003525E8 /* Icon@2x.png in Resources */,
-				1819409C12F3214A00BBB0C6 /* credits.txt in Resources */,
 				1831BC7012FC2A5400A86AD4 /* iTunesArtwork in Resources */,
 				1840690F1304405600A73515 /* MainWindow_iPad.xib in Resources */,
 				184069101304405600A73515 /* MainWindow_iPhone.xib in Resources */,
@@ -1435,6 +1439,8 @@
 				18B5E13713BDA89D00366FD2 /* colorPickerKnob.png in Resources */,
 				18B5E13913BDA89D00366FD2 /* pickerColorWheel.png in Resources */,
 				18EE3D9D13C09B1500775E7D /* P5P_default.sqlite in Resources */,
+				18F22BE613C5A87F005BC007 /* COPYING in Resources */,
+				18F22BE813C5A89F005BC007 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
