@@ -80,7 +80,7 @@ struct rgb_color {
 // Actions
 - (void)actionSwatch:(id)sender;
 - (void)actionColor:(id)sender;
-- (void)actionClear:(id)sender;
+- (void)actionRandomColor:(id)sender;
 - (void)actionSetColor:(id)sender;
 - (void)actionApply:(id)sender;
 

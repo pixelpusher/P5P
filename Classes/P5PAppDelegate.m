@@ -403,7 +403,14 @@ NSString *STORE_DEFAULT = @"P5P_default";
 	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 	
 	// set
-	[userDefaults setObject:value forKey:key];
+    if (value != NULL) {
+        [userDefaults setObject:value forKey:key];
+    }
+    else {
+        [userDefaults removeObjectForKey:key];
+    }
+    
+    // sync
 	[userDefaults synchronize];
 
 }

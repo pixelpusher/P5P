@@ -18,12 +18,13 @@ public class Colors {
         bgcolor = color(255,252,240);
         
         // default colors
-        colors = new color[5];
+        colors = new color[6];
         colors[0] = color(181,163,131); // Shikan-cha 
-        colors[1] = color(187,192,0);// Kimidori
-        colors[2] = color(105,153,174); // Sabiasagi
-        colors[3] = color(225,0,178); // Botan-iro
-        colors[4] = color(229,0,30); // Shinkou 
+        colors[1] = color(187,192,0); // Kimidori
+        colors[2] = color(123,137,66); // Uguisu-cha
+        colors[3] = color(105,153,174); // Sabiasagi
+        colors[4] = color(225,0,178); // Botan-iro
+        colors[5] = color(229,0,30); // Shinkou 
         
     }
     

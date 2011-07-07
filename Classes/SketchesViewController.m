@@ -292,16 +292,13 @@
  
 	// navigation controller
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:nfoController];
-	navController.view.backgroundColor = [UIColor colorWithRed:219.0/255.0 green:222.0/255.0 blue:227.0/255.0 alpha:1.0];
-
+	//navController.view.backgroundColor = [UIColor colorWithRed:219.0/255.0 green:222.0/255.0 blue:227.0/255.0 alpha:1.0];
+    navController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_texture.png"]];
+    navController.navigationBar.barStyle = UIBarStyleBlack;
  
 	// ipad
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		navController.modalPresentationStyle = UIModalPresentationFormSheet;
-	}
-	// iphone
-	else {
-		navController.navigationBar.barStyle = UIBarStyleBlack;
 	}
 
 	

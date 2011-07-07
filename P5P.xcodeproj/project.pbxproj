@@ -66,6 +66,8 @@
 		1831BC7012FC2A5400A86AD4 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 1831BC6F12FC2A5400A86AD4 /* iTunesArtwork */; };
 		183932DD138E446C00EC3940 /* icon_notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 183932DB138E446C00EC3940 /* icon_notification.png */; };
 		183932DE138E446C00EC3940 /* icon_notification@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183932DC138E446C00EC3940 /* icon_notification@2x.png */; };
+		183B4C8413C5C19E00D8C4C9 /* SketchToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B4C8313C5C19E00D8C4C9 /* SketchToolbar.m */; };
+		183B4C8813C5DA2B00D8C4C9 /* bg_texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 183B4C8713C5DA2B00D8C4C9 /* bg_texture.png */; };
 		183FCF6613A2D11200113A97 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FCF6313A2D11200113A97 /* ASIDataCompressor.m */; };
 		183FCF6713A2D11200113A97 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FCF6513A2D11200113A97 /* ASIDataDecompressor.m */; };
 		1840690F1304405600A73515 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1840690D1304405600A73515 /* MainWindow_iPad.xib */; };
@@ -328,6 +330,9 @@
 		1831BC6F12FC2A5400A86AD4 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		183932DB138E446C00EC3940 /* icon_notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notification.png; path = Assets/icon_notification.png; sourceTree = "<group>"; };
 		183932DC138E446C00EC3940 /* icon_notification@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_notification@2x.png"; path = "Assets/icon_notification@2x.png"; sourceTree = "<group>"; };
+		183B4C8213C5C19E00D8C4C9 /* SketchToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchToolbar.h; sourceTree = "<group>"; };
+		183B4C8313C5C19E00D8C4C9 /* SketchToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchToolbar.m; sourceTree = "<group>"; };
+		183B4C8713C5DA2B00D8C4C9 /* bg_texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_texture.png; path = Assets/bg_texture.png; sourceTree = "<group>"; };
 		183FCF6213A2D11200113A97 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
 		183FCF6313A2D11200113A97 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
 		183FCF6413A2D11200113A97 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
@@ -925,6 +930,7 @@
 		18830253130DACDF009A6939 /* backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				183B4C8713C5DA2B00D8C4C9 /* bg_texture.png */,
 				184CF9E71316862600E5D6F9 /* bg_collections.png */,
 				18743E1213116C73005DFF44 /* bg_settings.png */,
 				185352AE130D56AB00BD54E3 /* bg_sketches.png */,
@@ -950,6 +956,8 @@
 				182462C5133B454100E940BF /* TwitterComposeViewController.m */,
 				1805FF23131809F000A291BF /* PreloaderView.h */,
 				1805FF24131809F000A291BF /* PreloaderView.m */,
+				183B4C8213C5C19E00D8C4C9 /* SketchToolbar.h */,
+				183B4C8313C5C19E00D8C4C9 /* SketchToolbar.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -1441,6 +1449,7 @@
 				18EE3D9D13C09B1500775E7D /* P5P_default.sqlite in Resources */,
 				18F22BE613C5A87F005BC007 /* COPYING in Resources */,
 				18F22BE813C5A89F005BC007 /* README in Resources */,
+				183B4C8813C5DA2B00D8C4C9 /* bg_texture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1584,6 +1593,7 @@
 				18B5E13813BDA89D00366FD2 /* HSV.c in Sources */,
 				18B5E14413BDA91300366FD2 /* CellColorViewController.m in Sources */,
 				18B5E14713BDABC500366FD2 /* CellColor.m in Sources */,
+				183B4C8413C5C19E00D8C4C9 /* SketchToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1636,7 +1646,7 @@
 				);
 				PRODUCT_NAME = p5p;
 				PROVISIONING_PROFILE = "09CD1CC9-7511-4E30-9B5D-F510044A8F00";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8A5EDF31-C38B-4DDC-B7F3-6647D97BDCBA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "09CD1CC9-7511-4E30-9B5D-F510044A8F00";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

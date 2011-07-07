@@ -71,13 +71,25 @@
 										target:self 
 										action:@selector(actionApply:)];
 	
+    // remove background
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.opaque = YES;
+    self.tableView.backgroundView = nil;
 	
 	// iPad
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        // pattern view
+        UIView *pattern = [[UIView alloc] initWithFrame:self.view.frame];
+        pattern.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_texture.png"]];
+        self.tableView.backgroundView = pattern;
+        
+        // buttons
 		self.navigationItem.leftBarButtonItem = btnReset;
 		[btnReset release];	
 		self.navigationItem.rightBarButtonItem = btnApply;
 		[btnApply release];	
+
 	}
 	// iPhone
 	else {
@@ -104,11 +116,8 @@
 							spacer,
 							nil];
 							
-		// remove background
-		self.tableView.backgroundColor = [UIColor clearColor];
-		self.tableView.opaque = YES;
-		self.tableView.backgroundView = nil;
 	}
+
 }
 
 /*

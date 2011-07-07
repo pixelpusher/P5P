@@ -28,6 +28,7 @@
 #import "P5PViewController.h"
 #import "HTMLView.h"
 #import "NoteView.h"
+#import "SketchToolbar.h"
 #import "SettingsViewController.h"
 
 
@@ -58,7 +59,7 @@ enum {
 
 	// ui
 	TapDetectingWindow *tapWindow;
-	UIToolbar *toolbar;
+	SketchToolbar *toolbar;
 	UILabel *labelTitle;
 	HTMLView *htmlView;
 	NoteView *note;

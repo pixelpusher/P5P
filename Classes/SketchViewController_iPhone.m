@@ -39,7 +39,7 @@
 	DLog();
 	
 	// enter modal moda
-	//[self setModeModal:YES]; // in case view is hidden
+	[self setModeModal:YES]; // in case view is hidden
  
 	// navigation controller
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
@@ -75,7 +75,7 @@
 	[self dismissModalViewControllerAnimated:YES];
 	
 	// leave modal mode
-	//[self setModeModal:NO]; // in case view is hidden
+	[self setModeModal:NO]; // in case view is hidden
 	
 	// refresh super
 	[super settingsApply];

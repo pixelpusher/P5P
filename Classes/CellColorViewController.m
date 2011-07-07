@@ -67,11 +67,10 @@
 		self.contentSizeForViewInPopover = CGSizeMake(frame.size.width, frame.size.height);
 		self.view.backgroundColor = [UIColor colorWithRed:219.0/255.0 green:222.0/255.0 blue:227.0/255.0 alpha:1.0];
 		
-		// remove background for iphone
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-			self.view.backgroundColor = [UIColor clearColor];
-			self.view.opaque = YES;
-		}
+		// remove background 
+        self.view.backgroundColor = [UIColor clearColor];
+        self.view.opaque = YES;
+
         
         // values
         float inset = 20;
@@ -144,7 +143,6 @@
             [swatches addObject:[[ColorSwatch alloc] initWithLabel:@"Kimidori" color:[UIColor colorWithRed:187.0/255.0 green:192.0/255.0 blue:0/255.0 alpha:1.0]]];
             [swatches addObject:[[ColorSwatch alloc] initWithLabel:@"Uguisu-cha" color:[UIColor colorWithRed:123.0/255.0 green:137.0/255.0 blue:66.0/255.0 alpha:1.0]]];
             [swatches addObject:[[ColorSwatch alloc] initWithLabel:@"Sabiasagi" color:[UIColor colorWithRed:105.0/255.0 green:153.0/255.0 blue:174.0/255.0 alpha:1.0]]];
-            //[swatches addObject:[[ColorSwatch alloc] initWithLabel:@"Syobu-iro" color:[UIColor colorWithRed:141.0/255.0 green:0.0/255.0 blue:203.0/255.0 alpha:1.0]]];
             [swatches addObject:[[ColorSwatch alloc] initWithLabel:@"Botan-iro" color:[UIColor colorWithRed:225.0/255.0 green:0.0/255.0 blue:178.0/255.0 alpha:1.0]]];
             [swatches addObject:[[ColorSwatch alloc] initWithLabel:@"Shinkou" color:[UIColor colorWithRed:229.0/255.0 green:0.0/255.0 blue:30.0/255.0 alpha:1.0]]];
 
@@ -191,6 +189,9 @@
         // clear
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             
+            // background pattern
+            self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_texture.png"]];
+            
             // button apply
             UIBarButtonItem *btnApply = [[UIBarButtonItem alloc] 
                                          initWithTitle:NSLocalizedString(@"Apply",@"Apply")
@@ -210,8 +211,8 @@
             btnClear.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:15.0]; 
             [btnClear setTitleColor:[UIColor colorWithRed:63.0/255.0 green:63.0/255.0 blue:63.0/255.0 alpha:1.0] forState:UIControlStateNormal];
             
-            [btnClear setTitle:NSLocalizedString(@"Clear Color",@"Clear Color") forState:UIControlStateNormal];
-            [btnClear addTarget:self action:@selector(actionClear:) forControlEvents:UIControlEventTouchUpInside];
+            [btnClear setTitle:NSLocalizedString(@"Random Color",@"Random Color") forState:UIControlStateNormal];
+            [btnClear addTarget:self action:@selector(actionRandomColor:) forControlEvents:UIControlEventTouchUpInside];
             
             // add
             [self.view addSubview:btnClear];
@@ -223,10 +224,10 @@
             
             // button clear
             UIBarButtonItem *btnClear = [[UIBarButtonItem alloc] 
-                                         initWithTitle:NSLocalizedString(@"Clear",@"Clear")
+                                         initWithTitle:NSLocalizedString(@"Random Color",@"Random Color")
                                          style:UIBarButtonItemStyleBordered 
                                          target:self 
-                                         action:@selector(actionClear:)];
+                                         action:@selector(actionRandomColor:)];
             
             // button set
             UIBarButtonItem *btnSet = [[UIBarButtonItem alloc] 
@@ -341,9 +342,9 @@
 }
 
 /*
- * Action clear.
+ * Action random color.
  */
-- (void)actionClear:(id)sender {
+- (void)actionRandomColor:(id)sender {
     FLog();
     
     // picker
@@ -360,6 +361,11 @@
     // label
     [labelSelectionRGB setText:[NSString stringWithFormat:@"R: \nG: \nB: "]];
     [labelSelectionHSV setText:[NSString stringWithFormat:@"H: \nS: \nV:"]];
+    
+    // back
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 

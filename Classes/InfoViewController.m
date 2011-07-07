@@ -282,6 +282,7 @@
 		// mail composer
 		MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
 		composer.mailComposeDelegate = self;
+        composer.navigationBar.barStyle = UIBarStyleBlack;
 		
 		// subject
 		[composer setSubject:[NSString stringWithFormat:@"P5P iPad/iPhone App"]];
@@ -381,6 +382,7 @@
 		// mail composer
 		MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
 		composer.mailComposeDelegate = self;
+        composer.navigationBar.barStyle = UIBarStyleBlack;
 		
 		// subject
 		[composer setToRecipients:[[[NSArray alloc] initWithObjects:vAppEmail,nil] autorelease]];

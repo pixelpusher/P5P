@@ -51,13 +51,18 @@
 		// view
 		self.view = [[UIView alloc] initWithFrame:frame];
 		self.contentSizeForViewInPopover = CGSizeMake(frame.size.width, frame.size.height);
-		self.view.backgroundColor = [UIColor colorWithRed:219.0/255.0 green:222.0/255.0 blue:227.0/255.0 alpha:1.0];
 		
-		// remove background for iphone
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-			self.view.backgroundColor = [UIColor clearColor];
-			self.view.opaque = YES;
-		}
+        // remove background
+        self.view.backgroundColor = [UIColor clearColor];
+        self.view.opaque = YES;
+		
+		// ipad
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            
+            // background pattern
+            self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_texture.png"]];
+        }
+
 		
 		// text field
 		UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(10,20,self.view.frame.size.width-20,40)];
@@ -122,7 +127,11 @@
 	
 	// delegate
 	if (delegate != nil && [delegate respondsToSelector:@selector(updateText:)]) {
-		[delegate updateText:[textField text]];
+        NSString *text = [textField text];
+        if ([text isEqualToString:@""]) {
+            text = NULL;
+        }
+		[delegate updateText:text];
 	}
 }
 

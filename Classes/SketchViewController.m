@@ -58,7 +58,7 @@
 #pragma mark Constants
 
 // constants
-#define kToolbarOpacity	0.80f
+#define kToolbarOpacity	0.96f
 #define kToolbarTimeShow 0.21f
 #define kToolbarTimeHide 0.45f
 #define kToolbarAutohideTime 20.0f
@@ -116,37 +116,28 @@
 	
 
 	// toolbar
-	UIToolbar *tb = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, 44)];
+	SketchToolbar *tb = [[SketchToolbar alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, 44)];
 	tb.alpha = kToolbarOpacity;
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		tb.barStyle = UIBarStyleDefault;
-	}
-    else {
-        tb.barStyle = UIBarStyleBlackTranslucent;
-    }
 	[tb setAutoresizingMask: (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight) ];
 	
 	
 	
 	// label
 	UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, tb.frame.size.width/3.0, tb.frame.size.height)];
-	[lbl setBackgroundColor:[UIColor clearColor]];
 	[lbl setText:@"P5P"];
+    [lbl setBackgroundColor:[UIColor clearColor]];
+    [lbl setTextColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    //[lbl setShadowColor:[UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:0.95]];
+    //[lbl setShadowOffset:CGSizeMake(1,1)];
 	
 	// make it big
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		[lbl setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
 		[lbl setTextAlignment:UITextAlignmentCenter];
-		[lbl setTextColor:[UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:1.0]];
-		[lbl setShadowColor:[UIColor colorWithRed:236.0/255.0 green:237.0/255.0 blue:240.0/255.0 alpha:0.95]];
-		[lbl setShadowOffset:CGSizeMake(1,1)];
 	}
 	else {
 		[lbl setFont:[UIFont fontWithName:@"Helvetica-Bold" size:14]];
 		[lbl setTextAlignment:UITextAlignmentLeft];
-		[lbl setTextColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]];
-		[lbl setShadowColor:[UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:0.95]];
-		[lbl setShadowOffset:CGSizeMake(1,1)];
 	}
 
 	
@@ -727,7 +718,7 @@ static BOOL toolbarHidden = NO;
 		
 		// print controller
 		UIPrintInteractionController *pic = [UIPrintInteractionController sharedPrintController];
-		pic.delegate = self;
+        pic.delegate = self;
 		
 		// print info
 		UIPrintInfo *printInfo = [UIPrintInfo printInfo];
@@ -814,6 +805,7 @@ static BOOL toolbarHidden = NO;
 		// mail composer
 		MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
 		composer.mailComposeDelegate = self;
+        composer.navigationBar.barStyle = UIBarStyleBlack;
 		
 		// recipient
 		NSString *email = (NSString*) [(P5PAppDelegate*)[[UIApplication sharedApplication] delegate] getUserDefault:udPreferenceEmail];
@@ -876,16 +868,13 @@ static BOOL toolbarHidden = NO;
 	// navigation controller
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:twitterCompose];
 	navController.view.backgroundColor = [UIColor colorWithRed:219.0/255.0 green:222.0/255.0 blue:227.0/255.0 alpha:1.0];
+    navController.navigationBar.barStyle = UIBarStyleBlack;
 
  
 	// ipad
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		navController.modalPresentationStyle = UIModalPresentationFormSheet;
 		[navController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-	}
-	// iphone
-	else {
-		navController.navigationBar.barStyle = UIBarStyleBlack;
 	}
 
 	

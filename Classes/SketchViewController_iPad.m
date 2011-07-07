@@ -47,7 +47,7 @@
 	UINavigationController *sNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
 	UIPopoverController *sPopoverController = [[UIPopoverController alloc] initWithContentViewController:sNavigationController];
 	[sPopoverController setPopoverContentSize:CGSizeMake(settingsViewController.view.frame.size.width, settingsViewController.view.frame.size.height)];
-	[[[sPopoverController contentViewController] view] setAlpha:0.9f];
+    sPopoverController.contentViewController.view.alpha = 0.9f;
 	settingsPopoverController = [sPopoverController retain];
 	[sPopoverController release];
 
