@@ -173,6 +173,7 @@ void draw() {
 	// push it
 	pushMatrix();
 	translate(s/2,s/2);
+    ellipse(0,0,0.0001,0.0001); // strange fix for ios5 bug...
 	
 	// shape
 	float ox = 0;
@@ -213,7 +214,8 @@ void draw() {
 				translate(-d,-d);
 				scale(-1, -1);
 			}
-			
+
+
 			// shape
 			beginShape();
 			vertex(px[0], py[0]); 
@@ -226,6 +228,7 @@ void draw() {
 				
 			}
 			endShape(CLOSE);
+
 			
 			// and pop it goes
 			popMatrix();

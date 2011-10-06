@@ -9,7 +9,7 @@ var P5P = {
     */
     device:true,
     debug:false,
-    track:false,
+    track:true,
     
 	
 	/*
