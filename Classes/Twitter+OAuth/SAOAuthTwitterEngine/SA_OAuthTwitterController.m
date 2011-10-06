@@ -90,7 +90,7 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 
 
 - (id) initWithEngine: (SA_OAuthTwitterEngine *) engine andOrientation:(UIInterfaceOrientation)theOrientation {
-	if ((self = [super init])) {
+	if (self = [super init]) {
 		self.engine = engine;
 		if (!engine.OAuthSetup) [_engine requestRequestToken];
 		self.orientation = theOrientation;
@@ -100,8 +100,7 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 32, 480, 288)];
 		else
 			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 44, 320, 416)];
-
-            
+		
 		_webView.alpha = 0.0;
 		_webView.delegate = self;
 		_webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -155,7 +154,6 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 	_navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
 	_backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.navigationBar.barStyle = UIBarStyleBlack;
 
 	if (!UIInterfaceOrientationIsLandscape( self.orientation)) [self.view addSubview:_backgroundView];
 	
@@ -164,15 +162,7 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 	
 	_blockerView = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 60)] autorelease];
 	_blockerView.backgroundColor = [UIColor colorWithWhite: 0.0 alpha: 0.8];
-	//_blockerView.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
-    // iPad
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		_blockerView.center = CGPointMake(768 / 2, 1024 / 2);
-	}
-	// iPhone
-	else {
-        _blockerView.center = CGPointMake(320 / 2, 480 / 2);
-    }
+	_blockerView.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2);
 	_blockerView.alpha = 0.0;
 	_blockerView.clipsToBounds = YES;
 	if ([_blockerView.layer respondsToSelector: @selector(setCornerRadius:)]) [(id) _blockerView.layer setCornerRadius: 10];
@@ -192,7 +182,7 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 	[self.view addSubview: _blockerView];
 	[spinner startAnimating];
 	
-	UINavigationItem				*navItem = [[[UINavigationItem alloc] initWithTitle: NSLocalizedString(@"Twitter", nil)] autorelease];
+	UINavigationItem				*navItem = [[[UINavigationItem alloc] initWithTitle: NSLocalizedString(@"Twitter Info", nil)] autorelease];
 	navItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel target: self action: @selector(cancel:)] autorelease];
 	
 	[_navBar pushNavigationItem: navItem animated: NO];
@@ -281,33 +271,21 @@ Ugly. I apologize for its inelegance. Bleah.
 *********************************************************************************************************/
 
 - (NSString *) locateAuthPinInWebView: (UIWebView *) webView {
-	NSString			*js = @"var d = document.getElementById('oauth-pin'); if (d == null) d = document.getElementById('oauth_pin'); if (d) d = d.innerHTML; if (d == null) {var r = new RegExp('\\\\s[0-9]+\\\\s'); d = r.exec(document.body.innerHTML); if (d.length > 0) d = d[0];} d.replace(/^\\s*/, '').replace(/\\s*$/, ''); d;";
-	NSString			*pin = [webView stringByEvaluatingJavaScriptFromString: js];
+	// Look for either 'oauth-pin' or 'oauth_pin' in the raw HTML
+	NSString			*js = @"var d = document.getElementById('oauth-pin'); if (d == null) d = document.getElementById('oauth_pin'); if (d) d = d.innerHTML; d;";
+	NSString			*pin = [[webView stringByEvaluatingJavaScriptFromString: js] stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	
-//	if (pin.length > 0) return pin;
-	
-	NSString			*html = [webView stringByEvaluatingJavaScriptFromString: @"document.body.innerText"];
-	
-	if (html.length == 0) return nil;
-	
-	const char			*rawHTML = (const char *) [html UTF8String];
-	int					length = strlen(rawHTML), chunkLength = 0;
-	
-	for (int i = 0; i < length; i++) {
-		if (rawHTML[i] < '0' || rawHTML[i] > '9') {
-			if (chunkLength == 7) {
-				char				*buffer = (char *) malloc(chunkLength + 1);
-				
-				memmove(buffer, &rawHTML[i - chunkLength], chunkLength);
-				buffer[chunkLength] = 0;
-				
-				pin = [NSString stringWithUTF8String: buffer];
-				free(buffer);
-				return pin;
-			}
-			chunkLength = 0;
-		} else
-			chunkLength++;
+	if (pin.length == 7) {
+		return pin;
+	} else {
+		// New version of Twitter PIN page
+		js = @"var d = document.getElementById('oauth-pin'); if (d == null) d = document.getElementById('oauth_pin'); " \
+		"if (d) { var d2 = d.getElementsByTagName('code'); if (d2.length > 0) d2[0].innerHTML; }";
+		pin = [[webView stringByEvaluatingJavaScriptFromString: js] stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		
+		if (pin.length == 7) {
+			return pin;
+		}
 	}
 	
 	return nil;

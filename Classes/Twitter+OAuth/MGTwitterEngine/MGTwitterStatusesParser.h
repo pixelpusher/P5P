@@ -10,7 +10,7 @@
 
 #import "MGTwitterXMLParser.h"
 
-@interface MGTwitterStatusesParser : MGTwitterXMLParser <NSXMLParserDelegate> {
+@interface MGTwitterStatusesParser : MGTwitterXMLParser {
 
 }
 
