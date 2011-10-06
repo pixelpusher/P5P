@@ -50,7 +50,7 @@
 
  
 	// show the navigation controller modally
-	[navController setModalTransitionStyle:UIViewAnimationTransitionCurlUp];
+	[navController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
 	[self presentModalViewController:navController animated:YES];
  
 	// Clean up resources

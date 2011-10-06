@@ -6,6 +6,7 @@
 var defaults =  {
 	
 	// sketch
+	color:{'rgb':false},
 	randomness:{'value':0.3,'min':0,'max':1},
 	
 	// lines

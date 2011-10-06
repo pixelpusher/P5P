@@ -7,6 +7,7 @@
 var defaults =  {
 	
 	// sketch
+	color:{'rgb':false},
 	partitions:{'rmin':6,'rmax':18,'min':1,'max':24},
 	
 	// lines

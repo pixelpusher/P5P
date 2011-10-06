@@ -6,20 +6,21 @@
 var defaults =  {
 	
 	// sketch
-mode:"mode_1",
-touch:"frequency",
+	color:{'rgb':false},
+	mode:"mode_1",
+	touch:"frequency",
 	
 	// frequency
-frequency_random:true,
-frequency_x:{'value':1,'min':1,'max':20},
-frequency_y:{'value':2,'min':1,'max':30},
-frequency_phase_x:{'value':0,'min':0,'max':180},
-frequency_phase_y:{'value':0,'min':0,'max':180},
+	frequency_random:true,
+	frequency_x:{'value':1,'min':1,'max':20},
+	frequency_y:{'value':2,'min':1,'max':30},
+	frequency_phase_x:{'value':0,'min':0,'max':180},
+	frequency_phase_y:{'value':0,'min':0,'max':180},
 	
 	// modulation
-modulation_random:false,
-modulation_x:{'value':0,'min':0,'max':20},
-modulation_y:{'value':0,'min':0,'max':30}
+	modulation_random:false,
+	modulation_x:{'value':0,'min':0,'max':20},
+	modulation_y:{'value':0,'min':0,'max':30}
 	
 };
 

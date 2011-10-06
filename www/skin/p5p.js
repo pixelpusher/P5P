@@ -23,7 +23,7 @@ var P5P = {
 	* Initialize on document ready.
 	*/
 	initOnDocumentReady: function() {	
-		console.log("initOnDocumentReady");
+		//console.log("initOnDocumentReady");
 	
 		// init ios
 		P5P.ios = jQuery().ios({"device":P5P.device,"debug":P5P.debug});

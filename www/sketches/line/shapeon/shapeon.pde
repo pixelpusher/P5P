@@ -9,6 +9,7 @@
 var defaults =  {
 
 	// sketch
+	color:{'rgb':false},
 	partitions:{'rmin':1,'rmax':6,'min':1,'max':6},
 
 	// shape

@@ -6,6 +6,7 @@
 var defaults =  {
 	
     // sketch
+	color:{'rgb':false},
     layer:true,
     
     // nodes

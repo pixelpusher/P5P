@@ -37,9 +37,11 @@
 // Properties
 @property (nonatomic, retain) UIImageView *collectionImage;
 @property (nonatomic, retain) UILabel *collectionTitle;
-@property BOOL disabled;
+
 
 // Methods
+- (void)setDisabled:(BOOL)value;
+- (BOOL)isDisabled;
 - (void)collectionImageRounded:(UIImage*)img;
 
 

@@ -7,6 +7,7 @@ var defaults =  {
 	
 	// sketch
 	interaction:"auto",
+	color:{'rgb':false},
 	randomdeath:{'value':0.3,'min':0,'max':1},
 	
 	// lines

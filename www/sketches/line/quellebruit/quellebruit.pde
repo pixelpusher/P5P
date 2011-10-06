@@ -7,6 +7,7 @@ var	defaults =  {
 	
 	// sketch
 	interaction:"auto",
+	color:{'rgb':false},
 	mode:"mode_1",
 	agents:{'rmin':300,'rmax':600,'min':100,'max':1200},
 	collisions:{'rmin':3,'rmax':9,'min':0,'max':18},

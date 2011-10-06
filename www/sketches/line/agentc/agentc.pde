@@ -7,6 +7,7 @@ var defaults =  {
 		
 	// sketch
 	interaction:"touch",
+	color:{'rgb':false},
 	movement_speed:{'value':0.5,'min':0.1,'max':1.0},
 	movement_randomness:{'value':0.5, 'min':0,'max':3},
 		

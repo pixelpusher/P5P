@@ -341,12 +341,12 @@
 	
 	// cell
 	GridCellCollection *cell = (GridCellCollection*) [gridView cellForItemAtIndex:index];
-	[cell setDisabled:!cell.disabled];
+	[cell setDisabled:! [cell isDisabled]];
 
 	// enable / disable collection
 	Collection *collection = [collections objectAtIndex:itemIndex];
 	P5PAppDelegate *appDelegate = (P5PAppDelegate*)[[UIApplication sharedApplication] delegate];
-	[appDelegate disableCollection:collection.cid disabled:cell.disabled];
+	[appDelegate disableCollection:collection.cid disabled:[cell isDisabled]];
 	
 	// reload
 	[gridView resetSelection];

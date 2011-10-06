@@ -72,8 +72,6 @@
 #pragma mark Business Methods
 
 
-/**
-* Initializes the text
 
 /**
 * Creates a CellTextViewController.

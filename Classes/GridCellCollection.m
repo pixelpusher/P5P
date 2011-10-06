@@ -36,7 +36,6 @@
 // accessors
 @synthesize collectionImage;
 @synthesize collectionTitle;
-@synthesize disabled;
 
 
 #pragma mark -
@@ -165,6 +164,9 @@
 		collectionImage.alpha = 1.0;
 	}
 
+}
+- (BOOL)isDisabled {
+    return disabled;
 }
 
 /*

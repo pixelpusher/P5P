@@ -144,11 +144,11 @@ article {
 }
 
 /* icons */
-.twitter, .facebook, .email {
+.twitter, .facebook, .email, .gplus  {
 	display:inline-block;
 	padding:3px;
 }
-.twitter:hover, .facebook:hover, .email:hover {
+.twitter:hover, .facebook:hover, .email:hover, .gplus:hover {
 	text-decoration:underline;
 }
 .twitter:before {
@@ -257,20 +257,24 @@ ul.cited {
 ul.cited li {
     margin:0 0 18px 0;
 }
-ul.cited li a:before {
+ul.cited li cite a:before {
     content:"➝  ";
 }
-ul.cited li a {
+ul.cited li cite a {
     text-decoration:none;
 }
-ul.cited li a:hover {
+ul.cited li cite a:hover {
     text-decoration:underline;
 }
-ul.cited li a em {
+ul.cited li cite a em {
     display:block;
 }
-ul.cited li a:hover em {
+ul.cited li cite a:hover em {
     text-decoration:none;
+}
+ul.cited li img {
+	border-radius:3px;
+	margin:0 0 5px -2px;
 }
 
 
@@ -279,10 +283,13 @@ ul.social {
     margin:-3px 0 0 -3px;
 }
 ul.social li {
-    margin:0 10px 0 0;
+    margin:0 9px 0 0;
 }
 ul.social li:after {
     content:"";
+}
+ul.social li#social_gplus {
+	margin:1px 0 0 18px;
 }
 
 

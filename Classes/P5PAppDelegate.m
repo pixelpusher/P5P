@@ -207,9 +207,6 @@ NSString *STORE_DEFAULT = @"P5P_default";
 		
 	// set version
 	[userDefaults setObject:appVersion forKey:udInformationAppVersion];
-    
-    // note
-    [self storeNotification:NSLocalizedString(@"Thanks for updating P5P - now with a new Color Picker. You may need to reset some of the sketches.",@"Thanks for updating P5P - now with a new Color Picker. You may need to reset some of the sketches.") type:udNoteApp];
 	
 	// load data
 	[self loadData];

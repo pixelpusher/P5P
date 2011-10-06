@@ -7,6 +7,7 @@ var defaults =  {
 		
     // sketch
     interaction:"touch",
+	color:{'rgb':false},
     module:"module_vertex",
     
     // boids

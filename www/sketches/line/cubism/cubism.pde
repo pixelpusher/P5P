@@ -6,6 +6,7 @@
 var defaults =  {
 	
 	// sketch
+	color:{'rgb':false},
 	partitions:{'rmin':4,'rmax':12,'min':3,'max':18},
 	randomness:{'value':0.3, 'min':0,'max':1}
 

@@ -7,6 +7,7 @@
 var defaults =  {
 
 	// sketch
+	color:{'rgb':false},
 	live:true,
 	partitions:{'rmin':2,'rmax':4,'min':2,'max':6},
 	flip:false,
