@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>www/sketches/line/_plib/line.pde</string>
+	<string>www/skin/css/screen/general.css</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -266,14 +266,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>276</integer>
+				<integer>49</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>300</integer>
+			<integer>23</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>32</integer>
+				<key>line</key>
+				<integer>52</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>49</integer>
+			</dict>
 		</dict>
 		<key>www/skin/js/jquery/jquery.plugins.js</key>
 		<dict>
@@ -343,6 +359,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{1316, 91}, {1419, 968}}</string>
+	<string>{{865, -12}, {1419, 968}}</string>
 </dict>
 </plist>
