@@ -1541,6 +1541,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Beat Raess (536TB5YWPC)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1556,7 +1557,8 @@
 					"\"$(SRCROOT)/Classes/Twitter+OAuth/Libraries & Headers\"",
 				);
 				PRODUCT_NAME = p5p;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9523416D-0EAC-489B-B23B-DBB9097356C9";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62062A97-0E46-4E3D-AB41-A47223829377";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1568,7 +1570,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beat Raess";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beat Raess";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1582,8 +1584,8 @@
 					"\"$(SRCROOT)/Classes/Twitter+OAuth/Libraries & Headers\"",
 				);
 				PRODUCT_NAME = p5p;
-				PROVISIONING_PROFILE = "09CD1CC9-7511-4E30-9B5D-F510044A8F00";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F4D83FCF-1145-4274-90AD-F4C8B95092E4";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6D1DF2B4-E099-4E7C-AE09-395781BB3231";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1594,7 +1596,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Beat Raess (536TB5YWPC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Beat Raess (536TB5YWPC)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
@@ -1609,8 +1611,8 @@
 					"-Obj-C",
 				);
 				PRODUCT_NAME = p5p;
-				PROVISIONING_PROFILE = "B220DE30-B8F5-43F3-A417-652391E6C22A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D374B67F-8B2D-4726-89AF-1182999CD013";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62062A97-0E46-4E3D-AB41-A47223829377";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1622,7 +1624,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beat Raess";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beat Raess";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
@@ -1636,8 +1638,8 @@
 					"-Obj-C",
 				);
 				PRODUCT_NAME = p5p;
-				PROVISIONING_PROFILE = "09CD1CC9-7511-4E30-9B5D-F510044A8F00";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F4D83FCF-1145-4274-90AD-F4C8B95092E4";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6D1DF2B4-E099-4E7C-AE09-395781BB3231";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

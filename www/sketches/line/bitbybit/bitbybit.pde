@@ -140,8 +140,8 @@ void reset() {
 	
 	// sketch
 	background(bg);
-	noStroke();
-    fill(c);
+	fill(c);
+    noStroke();
 	
 }
 
@@ -160,6 +160,9 @@ void plantTree(float x, float y) {
  */
 void draw() { 
 	
+    // pixie
+    loadPixels();
+    
 	// trees
 	for (int t = 0; t < trees.size(); t++) {
 		
@@ -179,7 +182,7 @@ void draw() {
 			grow = false;
 		}
 		// restraint: collision
-		else if (get(tree.branch.cx,tree.branch.cy) == c) {
+        else if (pixels[tree.branch.cy*width+tree.branch.cx] == c) {
 			grow = false;
 		}
 		
@@ -194,6 +197,7 @@ void draw() {
 		}
 		// branch
 		else {
+
 			// current branch
 			if (tree.branch.n > 0) {
 				PVector bit = tree.branch.eraseBit((int)random(0,tree.branch.n));
@@ -208,6 +212,7 @@ void draw() {
 			else {
 				dead.add(t);
 			}
+
 		}
 	}
 	

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>www/skin/css/screen/general.css</string>
+	<string>www/skin/js/processing/processing.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -321,6 +321,20 @@
 				<integer>209</integer>
 			</dict>
 		</dict>
+		<key>www/skin/js/processing/processing.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>9993</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>www/skin/p5p.css</key>
 		<dict>
 			<key>caret</key>
@@ -354,11 +368,12 @@
 	<array>
 		<string>www/about.html</string>
 		<string>www/skin/css/screen/general.css</string>
+		<string>www/skin/js/processing/processing.js</string>
 		<string>www/sketches/line/_plib/line.pde</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{865, -12}, {1419, 968}}</string>
+	<string>{{402, 18}, {1419, 968}}</string>
 </dict>
 </plist>
