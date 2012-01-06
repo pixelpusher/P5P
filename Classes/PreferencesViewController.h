@@ -34,7 +34,6 @@ enum {
 enum {
     SectionPreferencesGeneral,
     SectionPreferencesSketch,
-	SectionPreferencesAccounts,
 	SectionPreferencesReset
 } P5PPreferencesSections;
 
@@ -50,10 +49,6 @@ enum {
     PreferenceRefreshTap
 } P5PPreferencesSectionSketch;
 
-//  Account Fields
-enum {
-	AccountTwitter
-} P5PPreferencesSectionAccounts;
 
 //  Reset Fields
 enum {

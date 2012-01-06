@@ -33,5 +33,4 @@
 #define udNoteSketch                            @"note_sketch"	
 
 // Values
-#define vAppEmail								@"p5p@cecinestpasparis.net"	
-#define vAppTwitter								@"@braess"	
+#define vAppEmail								@"p5p@cecinestpasparis.net"		

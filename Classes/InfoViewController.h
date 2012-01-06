@@ -23,10 +23,10 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import <Accounts/Accounts.h>
+#import <Twitter/Twitter.h>
 #import "CellButton.h"
 #import "NoteView.h"
-#import "TwitterComposeViewController.h"
-
 
 //  Sections
 enum {
@@ -76,7 +76,7 @@ enum {
 /**
 * Info Controller.
 */
-@interface InfoViewController : UITableViewController <UIActionSheetDelegate, UIAlertViewDelegate, MFMailComposeViewControllerDelegate, TwitterComposeDelegate, CellButtonDelegate> {
+@interface InfoViewController : UITableViewController <UIActionSheetDelegate, UIAlertViewDelegate, MFMailComposeViewControllerDelegate, CellButtonDelegate> {
 
 	// delegate
 	id<InfoDelegate> delegate;

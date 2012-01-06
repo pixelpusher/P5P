@@ -9,7 +9,7 @@ var P5P = {
     */
     device:true,
     debug:false,
-    track:true,
+    track:false,
     
 	
 	/*
@@ -261,6 +261,7 @@ var P5P = {
 		});
 		
 	},
+    
 	/**
 	* Initializes the sketches.
 	*/

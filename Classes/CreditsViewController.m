@@ -61,11 +61,6 @@
 	components = [[NSMutableArray alloc] init];
 	[components addObject:[[[Credit alloc] initWithName:@"AQGridView" meta:@"Alan Quatermain" url:@"http://github.com/AlanQuatermain/AQGridView"] autorelease]]; 
 	[components addObject:[[[Credit alloc] initWithName:@"JSON Framework" meta:@"Stig Brautaset" url:@"http://stig.github.com/json-framework"] autorelease]]; 
-	[components addObject:[[[Credit alloc] initWithName:@"Twitter+OAuth" meta:@"Ben Gottlieb" url:@"http://github.com/bengottlieb/Twitter-OAuth-iPhone"] autorelease]]; 
-	[components addObject:[[[Credit alloc] initWithName:@"MGTwitterEngine" meta:@"Matt Gemmell" url:@"https://github.com/mattgemmell/MGTwitterEngine"] autorelease]];
-	[components addObject:[[[Credit alloc] initWithName:@"PlainOAuth" meta:@"Jaanus Kase" url:@"https://github.com/jaanus/PlainOAuth"] autorelease]]; 
-	[components addObject:[[[Credit alloc] initWithName:@"ASIHTTPRequest" meta:@"Ben Copsey" url:@"https://github.com/pokeb/asi-http-request"] autorelease]];  
-	[components addObject:[[[Credit alloc] initWithName:@"OAuthConsumer" meta:@"Jon Crosby" url:@"http://code.google.com/p/oauth/"] autorelease]]; 
 	[components addObject:[[[Credit alloc] initWithName:@"SMPageControl" meta:@"Simon Maddox" url:@"http://github.com/simonmaddox/SMPageControl"] autorelease]]; 
 	[components addObject:[[[Credit alloc] initWithName:@"DoubleSlider" meta:@"Doukas Dimitris" url:@"https://github.com/doukasd/DoubleSlider"] autorelease]]; 
     [components addObject:[[[Credit alloc] initWithName:@"CMColorPicker" meta:@"Alex Restrepo" url:@"http://homepage.mac.com/alexrestrepo/indexmain.html"] autorelease]];

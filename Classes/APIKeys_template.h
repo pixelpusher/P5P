@@ -24,11 +24,3 @@
 // Google Analytics
 #define kGoogleAnalytics				@"GOOGLE-ANALYTICS-KEY"	
 
-// Twitter 
-#define kTwitterAPI						@"TWITTER-API-KEY-GOES-HERE"
-#define kTwitterOAuthConsumerKey		@"TWITTER-CONSUMER-KEY"		
-#define kTwitterOAuthConsumerSecret		@"TWITTER-CONSUMER-SECRET"
-
-// TwitPic
-#define kTwitPicAPI						@"AND-THE-TWITPIC-API-KEY"
-

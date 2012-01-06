@@ -806,6 +806,12 @@ static BOOL toolbarHidden = NO;
 		MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
 		composer.mailComposeDelegate = self;
         composer.navigationBar.barStyle = UIBarStyleBlack;
+        
+        // ipad
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            composer.modalPresentationStyle = UIModalPresentationFormSheet;
+            composer.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        }
 		
 		// recipient
 		NSString *email = (NSString*) [(P5PAppDelegate*)[[UIApplication sharedApplication] delegate] getUserDefault:udPreferenceEmail];
@@ -848,42 +854,47 @@ static BOOL toolbarHidden = NO;
 	
 	// modal mode
 	[self setModeModal:YES]; // avoids unload in case view is hidden
-	
-	// frame
-	CGRect tframe = CGRectMake(0,0,540,620);
-	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-		tframe = CGRectMake(0,0,320,480);
-	}
-	
-
-	// twitter compose
-	TwitterComposeViewController *twitterCompose = [[TwitterComposeViewController alloc] initWithFrame:tframe];
-	twitterCompose.delegate = self;
-	
-	// tweet
-	[twitterCompose setStatusText:[NSString stringWithFormat:@"#P5P #%@",sketch.sid]];
-	[twitterCompose setStatusImage:screenshot message:NSLocalizedString(@"Generated with P5P. \nhttp://p5p.cecinestpasparis.net",@"Generated with P5P. \nhttp://p5p.cecinestpasparis.net")];
-	
-	
-	// navigation controller
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:twitterCompose];
-	navController.view.backgroundColor = [UIColor colorWithRed:219.0/255.0 green:222.0/255.0 blue:227.0/255.0 alpha:1.0];
-    navController.navigationBar.barStyle = UIBarStyleBlack;
-
- 
-	// ipad
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		navController.modalPresentationStyle = UIModalPresentationFormSheet;
-		[navController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-	}
-
-	
-	// show the navigation controller modally
-	[self presentModalViewController:navController animated:YES];
- 
-	// clean up resources
-	[navController release];
-	[twitterCompose release];
+    
+    
+    // check twitter support
+    if(NSClassFromString(@"TWTweetComposeViewController") != nil) {
+        
+        // twitter composition view controller
+        TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
+        
+        // initial tweet text
+        [tweetViewController setInitialText:[NSString stringWithFormat:@"Sketch %@. Generated with P5P.\nhttp://p5p.cecinestpasparis.net",sketch.name]];
+        
+        // sketch
+        [tweetViewController addImage:screenshot];
+        
+        // completion handler
+        [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
+            
+            // whatever
+            switch (result) {
+                case TWTweetComposeViewControllerResultCancelled:
+                    FLog("Twitter: cancel");
+                    break;
+                case TWTweetComposeViewControllerResultDone:
+                    FLog("Twitter: done");
+                    break;
+                default:
+                    break;
+            }
+            
+            // leave modal mode
+            [self setModeModal:NO]; 
+            
+            // dismiss the tweet composition view controller
+            [self dismissModalViewControllerAnimated:YES];
+        }];
+        
+        
+        // modal
+        [self presentModalViewController:tweetViewController animated:YES];
+    }
+    
 	
 }
 
@@ -1090,22 +1101,6 @@ static BOOL toolbarHidden = NO;
 	
 }
 
-#pragma mark -
-#pragma mark TwitterComposeDelegate Protocol
-
-/*
- * Dismisses the twitter composition interface when users tap Cancel or Send.
- */
-- (void)dismissTwitterCompose {
-	DLog();
-	
-	// dismiss modal
-	[self dismissModalViewControllerAnimated:YES];
-	
-	// leave modal mode
-	[self setModeModal:NO]; 
-	
-}
 
 
 #pragma mark -

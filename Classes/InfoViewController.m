@@ -283,12 +283,18 @@
 		MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
 		composer.mailComposeDelegate = self;
         composer.navigationBar.barStyle = UIBarStyleBlack;
+        
+        // ipad
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            composer.modalPresentationStyle = UIModalPresentationCurrentContext;
+            composer.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        }
 		
 		// subject
 		[composer setSubject:[NSString stringWithFormat:@"P5P iPad/iPhone App"]];
 	 
 		// message
-		NSString *message = NSLocalizedString(@"\n\n\n---\nP5P\nA Collection of Generative Sketches.\nhttp://p5p.cecinestpasparis.net",@"\n\n\n---\nP5P\nA Collection of Generative Sketches.\nhttp://p5p.cecinestpasparis.net");
+		NSString *message = NSLocalizedString(@"P5P is a collection of generative sketches. The interactive visuals are each defined by a flexible set of rules and computed by randomly modified algorithms. Adjust and tweak their parameters, touch or move the device to influence the outcome of the generated images. Save, print, email or publish screenshots.\n\n\n---\nP5P\nA Collection of Generative Sketches.\nhttp://p5p.cecinestpasparis.net",@"P5P is a collection of generative sketches. The interactive visuals are each defined by a flexible set of rules and computed by randomly modified algorithms. Adjust and tweak their parameters, touch or move the device to influence the outcome of the generated images. Save, print, email or publish screenshots.\n\n\n---\nP5P\nA Collection of Generative Sketches.\nhttp://p5p.cecinestpasparis.net");
 		[composer setMessageBody:message isHTML:NO];
 		
 		// promo image
@@ -314,26 +320,44 @@
 	
 	// track
 	[Tracker trackEvent:TEventRecommend action:@"Twitter" label:[NSString stringWithFormat:@"%@",[(P5PAppDelegate*)[[UIApplication sharedApplication] delegate] getUserDefault:udInformationAppVersion]]];
+    
+    
+    
+    // check twitter support
+    if(NSClassFromString(@"TWTweetComposeViewController") != nil) {
+        
+        // twitter composition view controller
+        TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
+        
+        // initial tweet text
+        [tweetViewController setInitialText:NSLocalizedString(@"P5P iPad/iPhone App. A Collection of Generative Sketches. http://p5p.cecinestpasparis.net",@"P5P iPad/iPhone App. A Collection of Generative Sketches. http://p5p.cecinestpasparis.net")];
+        
+        // promo image
+        UIImage *pimg = [delegate randomSketchImage];
+        [tweetViewController addImage:pimg];
+        
+        // completion handler
+        [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
+            
+            switch (result) {
+                case TWTweetComposeViewControllerResultCancelled:
+                    FLog("Twitter: cancel");
+                    break;
+                case TWTweetComposeViewControllerResultDone:
+                    FLog("Twitter: done");
+                    break;
+                default:
+                    break;
+            }
+            
+            // dismiss the tweet composition view controller
+            [self dismissModalViewControllerAnimated:YES];
+        }];
+        
+        // modal
+        [self presentModalViewController:tweetViewController animated:YES];
+    }
 	
-	
-	// twitter compose
-	TwitterComposeViewController *twitterCompose = [[TwitterComposeViewController alloc] initWithFrame:self.view.frame];
-	twitterCompose.delegate = self;
-	
-	// message
-	NSString *message = NSLocalizedString(@"P5P iPad/iPhone App. A Collection of Generative Sketches. http://p5p.cecinestpasparis.net",@"P5P iPad/iPhone App. A Collection of Generative Sketches. http://p5p.cecinestpasparis.net");
-	[twitterCompose setStatusText:message];
-	
-	// promo image
-	UIImage *pimg = [delegate randomSketchImage];
-	[twitterCompose setStatusImage:pimg message:NSLocalizedString(@"Generated with P5P. \nhttp://p5p.cecinestpasparis.net",@"Generated with P5P. \nhttp://p5p.cecinestpasparis.net")];
-	
-	// show controller
-	[UIView beginAnimations:@"twitter_compose" context:nil];
-	[UIView setAnimationDuration:0.6];
-	[self.navigationController pushViewController: twitterCompose animated:NO]; 
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO]; 
-	[UIView commitAnimations];
 }
 
 /*
@@ -383,6 +407,12 @@
 		MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
 		composer.mailComposeDelegate = self;
         composer.navigationBar.barStyle = UIBarStyleBlack;
+        
+        // ipad
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            composer.modalPresentationStyle = UIModalPresentationCurrentContext;
+            composer.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        }
 		
 		// subject
 		[composer setToRecipients:[[[NSArray alloc] initWithObjects:vAppEmail,nil] autorelease]];

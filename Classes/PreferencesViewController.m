@@ -24,7 +24,6 @@
 #import "P5PAppDelegate.h"
 #import "P5PConstants.h"
 #import "Tracker.h"
-#import "AccountTwitterViewController.h"
 
 
 /*
@@ -49,11 +48,6 @@
 #define kKeyResetUserDefaults	@"key_reset_user_defaults"
 
 
-#pragma mark -
-#pragma mark Properties
-
-
-
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -67,7 +61,9 @@
 	
 	 // title
 	self.navigationItem.title = [NSString stringWithFormat:@"%@", NSLocalizedString(@"Preferences",@"Preferences")];
-
+    
+    // prepare table view
+	self.tableView.scrollEnabled = NO;
 	
 	// remove background for iPhone
 	self.tableView.backgroundColor = [UIColor clearColor];
@@ -250,9 +246,6 @@
         case SectionPreferencesSketch: {
 			return 2;
 		}
-        case SectionPreferencesAccounts: {
-			return 1;
-		}
 		case SectionPreferencesReset: {
 			return 1;
 		}
@@ -279,9 +272,6 @@
 		}
         case SectionPreferencesSketch: {
 			return NSLocalizedString(@"Sketch",@"Sketch");
-		}
-        case SectionPreferencesAccounts: {
-			return NSLocalizedString(@"Accounts",@"Accounts");
 		}
 		case SectionPreferencesReset: {
 			return NSLocalizedString(@"Reset",@"Reset");
@@ -429,22 +419,6 @@
 			break; 
 		}
 		
-		// general
-		case SectionPreferencesAccounts: {
-		FLog("SectionPreferencesAccounts");
-			
-			// sound
-            if ([indexPath row] == AccountTwitter) {
-				
-				// prepare cell
-				cell.textLabel.text = NSLocalizedString(@"Twitter",@"Twitter");
-				cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-				
-			}
-			
-			// kitty kat
-			break;
-		}
 	
 		// reset
 		case SectionPreferencesReset: {
@@ -518,20 +492,6 @@
 			break;
 		}
 		
-		// accounts
-		case SectionPreferencesAccounts: {
-		
-			// twitter
-            if ([indexPath row] == AccountTwitter) {
-
-		
-				// push controller
-				AccountTwitterViewController *accountTwitterController = [[AccountTwitterViewController alloc] initWithStyle:UITableViewStyleGrouped];
-				[self.navigationController pushViewController:accountTwitterController animated:YES];
-				[accountTwitterController release];
-			}
-			break;
-		}
 	}
 	
 }

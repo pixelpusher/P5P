@@ -23,7 +23,8 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import "TwitterComposeViewController.h"
+#import <Accounts/Accounts.h>
+#import <Twitter/Twitter.h>
 #import "TapDetectingWindow.h"
 #import "P5PViewController.h"
 #import "HTMLView.h"
@@ -52,7 +53,7 @@ enum {
 /**
 * SketchViewController.
 */
-@interface SketchViewController : UIViewController <TapDetectingWindowDelegate, HTMLDelegate, SettingsDelegate, MFMailComposeViewControllerDelegate, TwitterComposeDelegate, UIPrintInteractionControllerDelegate, UIAlertViewDelegate, UIActionSheetDelegate> {
+@interface SketchViewController : UIViewController <TapDetectingWindowDelegate, HTMLDelegate, SettingsDelegate, MFMailComposeViewControllerDelegate, UIPrintInteractionControllerDelegate, UIAlertViewDelegate, UIActionSheetDelegate> {
 
 	// delegate
 	id<P5PDelegate>delegate;
