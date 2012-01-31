@@ -128,8 +128,6 @@
 		18B5E14413BDA91300366FD2 /* CellColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5E14313BDA91300366FD2 /* CellColorViewController.m */; };
 		18B5E14713BDABC500366FD2 /* CellColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5E14613BDABC500366FD2 /* CellColor.m */; };
 		18BAEDC01304783800867A76 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BAEDBF1304783800867A76 /* SettingsViewController.m */; };
-		18DAE70714B6F49B00759AE0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAE70614B6F49B00759AE0 /* Accounts.framework */; };
-		18DAE70914B6F4A600759AE0 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAE70814B6F4A600759AE0 /* Twitter.framework */; };
 		18DAE70E14B6FD3E00759AE0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5BC109A6A2B0062928A /* CFNetwork.framework */; };
 		18DCE184133E6B7D004C4BE5 /* btn_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DCE183133E6B7D004C4BE5 /* btn_photo.png */; };
 		18DCE1AE133E6F5F004C4BE5 /* btn_attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DCE1AD133E6F5F004C4BE5 /* btn_attachment.png */; };
@@ -359,8 +357,6 @@
 		18B5E14613BDABC500366FD2 /* CellColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellColor.m; sourceTree = "<group>"; };
 		18BAEDBE1304783800867A76 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		18BAEDBF1304783800867A76 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		18DAE70614B6F49B00759AE0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		18DAE70814B6F4A600759AE0 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		18DCE183133E6B7D004C4BE5 /* btn_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_photo.png; path = Assets/btn_photo.png; sourceTree = "<group>"; };
 		18DCE1AD133E6F5F004C4BE5 /* btn_attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_attachment.png; path = Assets/btn_attachment.png; sourceTree = "<group>"; };
 		18E5243E12FC06CF0092DA84 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -423,8 +419,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DAE70E14B6FD3E00759AE0 /* CFNetwork.framework in Frameworks */,
-				18DAE70914B6F4A600759AE0 /* Twitter.framework in Frameworks */,
-				18DAE70714B6F49B00759AE0 /* Accounts.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -971,8 +965,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18DAE70814B6F4A600759AE0 /* Twitter.framework */,
-				18DAE70614B6F49B00759AE0 /* Accounts.framework */,
 				18049A2E12F2C55200B14E23 /* CoreData.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -1229,7 +1221,6 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Beat Raess (536TB5YWPC)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1244,8 +1235,6 @@
 					"\"$(SRCROOT)/Classes/GANTracker\"",
 				);
 				PRODUCT_NAME = p5p;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62062A97-0E46-4E3D-AB41-A47223829377";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1261,7 +1250,6 @@
 				);
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beat Raess";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = P5P_Prefix.pch;
@@ -1275,7 +1263,6 @@
 				);
 				PRODUCT_NAME = p5p;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "90A4C7D2-954B-4E8A-B59B-68A1B268516D";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1287,7 +1274,6 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Beat Raess (536TB5YWPC)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_VERSION = "";
@@ -1302,7 +1288,6 @@
 				);
 				PRODUCT_NAME = p5p;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62062A97-0E46-4E3D-AB41-A47223829377";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1318,7 +1303,6 @@
 				);
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beat Raess";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1331,8 +1315,6 @@
 					"-Obj-C",
 				);
 				PRODUCT_NAME = p5p;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "90A4C7D2-954B-4E8A-B59B-68A1B268516D";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

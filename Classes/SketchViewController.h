@@ -23,8 +23,8 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import <Accounts/Accounts.h>
-#import <Twitter/Twitter.h>
+//#import <Accounts/Accounts.h>
+//#import <Twitter/Twitter.h>
 #import "TapDetectingWindow.h"
 #import "P5PViewController.h"
 #import "HTMLView.h"

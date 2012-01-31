@@ -314,7 +314,7 @@
 
 /*
 * Recommend Twitter.
-*/
+
 - (void)recommendTwitter {
 	DLog();
 	
@@ -359,6 +359,7 @@
     }
 	
 }
+*/
 
 /*
 * Recommend App Store.

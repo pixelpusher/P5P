@@ -842,7 +842,7 @@ static BOOL toolbarHidden = NO;
 
 /*
 * Twitter.
-*/
+
 - (void)exportTwitter:(id)sender {
 	DLog();
 	
@@ -897,7 +897,7 @@ static BOOL toolbarHidden = NO;
     
 	
 }
-
+*/
 
 
 
